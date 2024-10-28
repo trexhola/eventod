@@ -1,0 +1,453 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease-in-out;
+}
+
+header {
+    background: linear-gradient(to right, #004080, #0066cc);
+    color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+@keyframes fadeInDown {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.eveescolar{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.eveescolar:hover{
+    transform: scale(1.05);
+}
+
+.header-text h1 {
+    margin: 0;
+    font-size: 2.2em;
+    color: #ffd700;
+    text-shadow: 
+        0 0 5px #ffb700,
+        0 0 10px #ffb700,
+        0 0 20px #ffd700,
+        0 0 30px #ffed80,
+        0 0 40px #ffd700,
+        0 0 55px #ffd700,
+        0 0 75px #ffd700;
+    transition: 0.3s ease-in-out;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    0% { text-shadow: 0 0 5px #ffb700, 0 0 10px #ffd700; }
+    100% { text-shadow: 0 0 20px #ffd700, 0 0 40px #ffed80, 0 0 60px #ffd700; }
+}
+
+.subtitulo {
+    font-size: 1em;
+    opacity: 0.9;
+    margin-top: 5px;
+    color: #ffd700;
+    text-shadow: 
+        0 0 3px #ffb700,
+        0 0 6px #ffb700,
+        0 0 12px #ffd700,
+        0 0 18px #ffed80,
+        0 0 24px #ffd700;
+    transition: 0.3s ease-in-out;
+}
+
+.intro ul {
+    list-style-type: none;
+    padding-left: 0;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.intro ul li {
+    background: #ffffff;
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 4px;
+    transition: background 0.3s, transform 0.2s;
+    cursor: pointer;
+    position: relative;
+}
+
+.intro ul li:hover {
+    background: #d9eaff;
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+p {
+    color: #333;
+}
+
+.descripcion-oculta {
+    opacity: 0;
+    max-height: 0;
+    transition: opacity 0.5s ease-in-out, max-height 0.5s ease-in-out;
+    overflow: hidden;
+    background-color: #ffffff;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #004080;
+}
+
+.descripcion-visible {
+    opacity: 1;
+    max-height: 200px;
+    color: #333;
+}
+
+/* Animación para el fondo de la página */
+body:hover {
+    background-color: #e0e7ff;
+    transition: background-color 0.5s;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 1.8em;
+    color: #004080;
+    margin-bottom: 20px;
+}
+
+section h3 {
+    font-size: 1.4em;
+    color: #0066cc;
+    margin-bottom: 10px;
+}
+
+section p {
+    text-align: justify;
+    line-height: 1.6;
+}
+
+section ul {
+    list-style-type: disc;
+    margin: 10px 0 20px 20px;
+}
+
+section ul li {
+    margin-bottom: 5px;
+}
+
+.cronograma {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.cronograma table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.cronograma table th, .cronograma table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.cronograma table th {
+    background-color: #0066cc;
+    color: #ffffff;
+}
+
+.cronograma table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.cronograma table tr:hover {
+    background-color: #d9eaff;
+}
+
+.cronograma table th, .cronograma table td {
+    text-align: center;
+    padding: 12px;
+}
+
+.cronograma table th {
+    background-color: #004080;
+    color: white;
+}
+
+.cronograma table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.cronograma table tr:hover {
+    background-color: #ddd;
+}
+
+.cronograma table td {
+    font-size: 1em;
+}
+
+/* Estilo para la lista de invitados */
+.invitados ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.invitados ul li {
+    background: #ffffff;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+}
+
+.invitados ul li:hover {
+    background: #e9f5ff;
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.invitados ul li::before {
+    content: "👤";
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+.invitados ul li strong {
+    margin-right: 5px;
+    color: #004080;
+}
+
+.invitados h2 {
+    text-align: center;
+    color: #004080;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.invitados {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+body:hover {
+    background-color: #e0e7ff;
+    transition: background-color 0.5s;
+}
+
+.organigrama-section {
+    background-color: #f8f9fa;
+    padding: 20px;
+}
+
+.organigrama-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tree ul {
+    padding-top: 20px;
+    position: relative;
+    transition: all 0.5s;
+    display: flex;
+    justify-content: center;
+}
+
+.tree li {
+    list-style-type: none;
+    margin: 0 auto;
+    position: relative;
+    padding: 20px 5px 0 5px;
+    text-align: center;
+}
+
+.tree li::before, .tree li::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 50%;
+    border-top: 2px dashed #8cb6ff;
+    width: 50%;
+    height: 20px;
+}
+
+.tree li::after {
+    right: auto;
+    left: 50%;
+    border-left: 2px dashed #8cb6ff;
+}
+
+.tree li:only-child::after, .tree li:only-child::before {
+    display: none;
+}
+
+.tree li:only-child {
+    padding-top: 0;
+}
+
+.tree li:first-child::before, .tree li:last-child::after {
+    border: 0;
+}
+
+.tree li:last-child::before {
+    border-right: 2px dashed #8cb6ff;
+}
+
+.box {
+    border: 2px solid #8cb6ff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    display: inline-block;
+    background-color: #4285f4;
+    color: white;
+    min-width: 150px;
+    text-align: center;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.box:hover {
+    background-color: #306ac3;
+}
+
+.tree ul ul::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    border-left: 2px dashed #8cb6ff;
+    width: 0;
+    height: 20px;
+}
+
+.tree ul ul {
+    display: flex;
+    justify-content: center;
+}
+
+.organigrama_maestors h1 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #004080;
+}
+
+.organigrama_maestors .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.organigrama_maestors table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.organigrama_maestors th, .organigrama_maestors td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.organigrama_maestors th {
+    background-color: #004080;
+    color: #fff;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.organigrama_maestors td {
+    background-color: #f9f9f9;
+    color: #333;
+    font-size: 1em;
+    vertical-align: top;
+}
+
+.organigrama_maestors tr:nth-child(even) td {
+    background-color: #f2f2f2;
+}
+
+.organigrama_maestors tr:hover td {
+    background-color: #e0f7fa;
+}
+
+.organigrama_maestors .time {
+    font-weight: bold;
+    color: #004080;
+}
+
+.organigrama_maestors .role {
+    font-weight: bold;
+    color: #007acc;
+    margin-bottom: 5px;
+}
+
+.organigrama_maestors .role:before {
+    content: "•";
+    color: #ffcc00;
+    margin-right: 5px;
+}
+
+.organigrama_maestors .activity {
+    font-weight: bold;
+    font-size: 1.05em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.organigrama_maestors p {
+    margin: 5px 0;
+    line-height: 1.6;
+}
